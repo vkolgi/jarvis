@@ -72,8 +72,17 @@ Plug 'othree/javascript-libraries-syntax.vim'
 " Improved syntax highlighting and indentation
 Plug 'othree/yajs.vim'
 
+" Syntax highlighting for python "
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+
+" A test runner to run tests "
+Plug 'janko/vim-test'
+
+" An orgasmic commenting plugin -- Scroolose says that
+Plug 'scrooloose/nerdcommenter'
+
 " === UI === "
-" File explorer
+" File explorer "
 Plug 'scrooloose/nerdtree'
 
 " Colorscheme
@@ -86,6 +95,12 @@ Plug 'vim-airline/vim-airline-themes'
 " Icons
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Fzf plugin for vim "
+Plug 'junegunn/fzf.vim'
+
+" Target plugin for vim "
+Plug 'wellle/targets.vim'
 
 " Initialize plugin system
 call plug#end()

@@ -3,8 +3,17 @@
   "suggest.maxCompleteItemCount": 20,
   "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "typescriptreact", "json", "javascriptreact", "typescript.tsx"],
   "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],
+  "python.autoComplete.extraPaths": ["backend/src", "backend/tests/utils"],
+  "python.venvFolders": [
+    ".virtualenvs",
+    ".pyenv"
+  ],
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
-  "diagnostic.infoSign": "•"
+  "diagnostic.infoSign": "•",
+  "python.jediEnabled": false,
+  "python.linting.pep8Args": ["--max-line-length=160", "--ignore=E302,E402"],
+  "prettier.eslintIntegration": true,
+  "javascript.validate.enable": false
 }
 

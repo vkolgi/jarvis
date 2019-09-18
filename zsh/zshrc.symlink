@@ -1,6 +1,6 @@
 # Path to oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-
+export LC_ALL=en_US.UTF-8
 # Name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME=""
@@ -13,7 +13,7 @@ ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOCONNECT=true
 
 # Enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -27,11 +27,11 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node brew tmux)
+plugins=(git node brew tmux z)
 
 # User configuration
 # Hide user@hostname if it's expected default user
-DEFAULT_USER="ctay20"
+DEFAULT_USER="vkolagi"
 prompt_context(){}
 
 # Setting rg as the default source for fzf
@@ -125,3 +125,16 @@ prompt spaceship
 SPACESHIP_PACKAGE_SHOW=false
 SPACESHIP_NODE_SHOW=false
 SPACESHIP_GIT_STATUS_STASHED=''
+
+# Python virtualenvwrapper path
+export WORKON_HOME=~/.virtualenvs
+export PROJECT_HOME=~/Documents/Projects/
+source /usr/local/bin/virtualenvwrapper.sh
+
+# Those openssl settings
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
+# pptool path
+source "/Users/vkolagi/.projectplace/bin/pptool-init.sh"
+[[ -s "/Users/ptyagi/.projectplace/bin/pptool-init.sh" ]] && source "/Users/ptyagi/.projectplace/bin/pptool-init.sh"

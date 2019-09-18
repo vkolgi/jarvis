@@ -241,6 +241,13 @@ let g:used_javascript_libs = 'underscore,requirejs,chai,jquery'
 " === Signify === "
 let g:signify_sign_delete = '-'
 
+" === semshi === "
+let g:semshi#update_delay_factor = 0.0001
+function! MyCustomHighlights()
+    hi semshiSelected ctermfg=231 guifg=#ffffff ctermbg=161 guibg=#d7005f
+endfunction
+autocmd FileType python call MyCustomHighlights()
+
 " ============================================================================ "
 " ===                                UI                                    === "
 " ============================================================================ "
@@ -282,9 +289,6 @@ set splitbelow
 
 " Don't dispay mode in command line (airilne already shows it)
 set noshowmode
-
-" Set floating window to be slightly transparent
-set winbl=10
 
 " coc.nvim color changes
 hi! link CocErrorSign WarningMsg
@@ -338,10 +342,10 @@ endfunction
 "   <leader>t - Browse list of files in current directory
 "   <leader>g - Search current directory for occurences of given term and close window if no results
 "   <leader>j - Search current directory for occurences of word under cursor
-nmap ; :Denite buffer<CR>
+nmap ; :Buffer<CR>
 nmap <leader>t :DeniteProjectDir file/rec<CR>
 nnoremap <leader>g :<C-u>Denite grep:. -no-empty<CR>
-nnoremap <leader>j :<C-u>DeniteCursorWord grep:.<CR>
+nnoremap <leader>j :Rg <C-R><C-W><CR>
 
 " Define mappings while in 'filter' mode
 "   <C-o>         - Switch to normal mode inside of search results
@@ -425,6 +429,14 @@ nmap <leader>z :JsDoc<CR>
 " Vim's default buffer
 vnoremap <leader>p "_dP
 
+" If installed using Homebrew
+set rtp+=/usr/local/opt/fzf
+nnoremap <C-p> :Files<Cr>
+nnoremap <C-g> :Rg<Cr>
+
+" Copy relative path to clipboard
+nnoremap <silent> <Leader>c :let @+ = expand("%")<CR>
+
 " ============================================================================ "
 " ===                                 MISC.                                === "
 " ============================================================================ "
@@ -459,3 +471,5 @@ set noswapfile
 if exists('g:loaded_webdevicons')
   call webdevicons#refresh()
 endif
+
+let test#python#runner = 'pytest'
