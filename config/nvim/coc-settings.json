@@ -1,9 +1,8 @@
 {
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "typescriptreact", "json", "javascriptreact", "typescript.tsx"],
-  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],
-  "python.autoComplete.extraPaths": ["backend/src", "backend/tests/utils"],
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "javascriptreact", "javascript.jsx"],
+  "python.autoComplete.extraPaths": ["backend/src", "backend/tests/utils", "backend/tests"],
   "python.venvFolders": [
     ".virtualenvs",
     ".pyenv"

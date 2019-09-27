@@ -264,7 +264,7 @@ catch
 endtry
 
 " Vim airline theme
-let g:airline_theme='space'
+let g:airline_theme='dark'
 
 " Add custom highlights in method that is executed every time a
 " colorscheme is sourced
@@ -343,7 +343,7 @@ endfunction
 "   <leader>g - Search current directory for occurences of given term and close window if no results
 "   <leader>j - Search current directory for occurences of word under cursor
 nmap ; :Buffer<CR>
-nmap <leader>t :DeniteProjectDir file/rec<CR>
+nmap <leader>t :TestNearest <CR>
 nnoremap <leader>g :<C-u>Denite grep:. -no-empty<CR>
 nnoremap <leader>j :Rg <C-R><C-W><CR>
 
@@ -436,6 +436,14 @@ nnoremap <C-g> :Rg<Cr>
 
 " Copy relative path to clipboard
 nnoremap <silent> <Leader>c :let @+ = expand("%")<CR>
+
+" Move lines up and down
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv<Paste>
 
 " ============================================================================ "
 " ===                                 MISC.                                === "

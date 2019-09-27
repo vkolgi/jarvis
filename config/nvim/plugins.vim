@@ -102,5 +102,14 @@ Plug 'junegunn/fzf.vim'
 " Target plugin for vim "
 Plug 'wellle/targets.vim'
 
+" For database access "
+Plug 'tpope/vim-dadbod'
+
+" Vim surround, another tpope's awesomeness "
+Plug 'tpope/vim-surround'
+
+" For javascript deoplete and ternjs"
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 " Initialize plugin system
 call plug#end()
