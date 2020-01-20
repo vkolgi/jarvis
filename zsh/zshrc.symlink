@@ -138,3 +138,7 @@ export CPPFLAGS="-I/usr/local/opt/openssl/include"
 # pptool path
 source "/Users/vkolagi/.projectplace/bin/pptool-init.sh"
 [[ -s "/Users/ptyagi/.projectplace/bin/pptool-init.sh" ]] && source "/Users/ptyagi/.projectplace/bin/pptool-init.sh"
+
+# poetry path
+PATH=$PATH:~/.poetry/bin
+

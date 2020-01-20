@@ -438,12 +438,12 @@ nnoremap <C-g> :Rg<Cr>
 nnoremap <silent> <Leader>c :let @+ = expand("%")<CR>
 
 " Move lines up and down
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv<Paste>
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv<Paste>
 
 " ============================================================================ "
 " ===                                 MISC.                                === "
@@ -480,4 +480,13 @@ if exists('g:loaded_webdevicons')
   call webdevicons#refresh()
 endif
 
+" Set the python test runner to pytest
 let test#python#runner = 'pytest'
+
+" Set the db url for sqlserver
+let g:db = 'sqlserver://ppdbuser:xeroxero@bglr-sql-01.rnd.projectplace.com/ppdata_vinayak'
+
+" Set the trigger key for vim emmet, i.e. ,, "
+let g:user_emmet_leader_key=','
+
+filetype plugin indent on

@@ -1,9 +1,18 @@
 #######################
 # ***    PLUGINS   *** #
 ########################
-set -g @plugin 'tmux-plugins/tmux-cpu'
-set -g @plugin 'christoomey/vim-tmux-navigator'
-
+set -g @tpm_plugins '           \
+   tmux-plugins/tpm             \
+   tmux-plugins/tmux-cpu        \
+   christoomey/vim-tmux-navigator \
+   tmux-plugins/tmux-resurrect  \
+   tmux-plugins/tmux-continuum  \
+'
+#set -g @plugin 'tmux-plugins/tmux-cpu'
+#set -g @plugin 'christoomey/vim-tmux-navigator'
+#set -g @plugin 'tmux-plugins/tmux-resurrect'
+#set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @resurrect-strategy-nvim 'session'
 ########################
 # ***    DISPLAY   *** #
 ########################
@@ -79,6 +88,11 @@ bind L resize-pane -R 5
 # visual notification of activity in other windows
 setw -g monitor-activity on
 set -g visual-activity on
+
+#########################
+# ***Restore session *** #
+#########################
+set -g @continuum-restore 'on'
 
 #########################
 # ***  STATUS BAR   *** #

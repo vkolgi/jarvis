@@ -2,10 +2,11 @@
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
   "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "javascriptreact", "javascript.jsx"],
-  "python.autoComplete.extraPaths": ["backend/src", "backend/tests/utils", "backend/tests"],
+  "python.autoComplete.extraPaths": ["backend/src", "backend/tests/utils", "backend/tests", "backend/src/odb"],
   "python.venvFolders": [
     ".virtualenvs",
-    ".pyenv"
+    ".pyenv",
+    "/Users/vkolagi/Library/Caches/pypoetry/virtualenvs/python-test-framework-4uxI1N8p-py3.7"
   ],
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
@@ -13,6 +14,7 @@
   "python.jediEnabled": false,
   "python.linting.pep8Args": ["--max-line-length=160", "--ignore=E302,E402"],
   "prettier.eslintIntegration": true,
-  "javascript.validate.enable": false
+  "javascript.validate.enable": false,
+  "java.autobuild.enabled": true
 }
 

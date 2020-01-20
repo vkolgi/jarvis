@@ -111,5 +111,10 @@ Plug 'tpope/vim-surround'
 " For javascript deoplete and ternjs"
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+Plug 'jaxbot/semantic-highlight.vim'
+
+Plug 'tpope/vim-cucumber'
+
+Plug 'mattn/emmet-vim'
 " Initialize plugin system
 call plug#end()
